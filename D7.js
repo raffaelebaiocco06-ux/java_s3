@@ -214,13 +214,15 @@ console.log(annisommati);
 */
 let nome = movies.find((film) => film.Title === "Avengers: Age of Ultron");
 console.log(nome);
+const findmoviebyid = function (id) {
+  return movies.find((movie) => movies.imdbID === id);
+};
+console.log(findmoviebyid("tt2395427"));
 
 /* ESERCIZIO 15 (findIndex)
   Scrivi una funzione per ottenere dall'array fornito l'indice del primo film uscito nell'anno fornito come parametro.
 */
-function trovaFilmPerAnno(array, anno) {
-  return array.findIndex((movie) => movie.Year === anno);
-}
-
-const indice = trovaFilmPerAnno(movies, 2015);
-console.log(indice);
+const findanddelete = function (array, year) {
+  return array.findIndex((movie) => movie.Year === year);
+};
+console.log(findanddelete(movies, 1984));
